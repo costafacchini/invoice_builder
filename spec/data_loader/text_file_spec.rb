@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'data_loader/data_loader_text_file'
+require 'data_loader/text_file'
 
-RSpec.describe DataLoaderTextFile do
+RSpec.describe DataLoader::TextFile do
   describe '#load_items' do
     context 'when input file is valid' do
       it 'loads items' do

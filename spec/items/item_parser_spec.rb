@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'item_parser'
+require 'items/item_parser'
 
 RSpec.describe ItemParser do
   describe '.parse' do

@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'item'
+require 'items/item'
 
 RSpec.describe Item do
   describe '#imported' do
