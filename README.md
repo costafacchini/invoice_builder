@@ -108,3 +108,7 @@ $ bundle exec rubocop
 ## Decisions
 
 Create a base class to load and process data regardless of the file type. Then I implemented a specialization of it that knows how to process text files. If the need arises to process a file in a different format, all you need to do is implement the adapter that knows how to read that type of file.
+
+Based on the samples given, to know if an item is imported just check if it has the word 'imported' in the name
+
+Based on the samples given, to find out if an item is not taxed, just check if it does not have the words 'chocolate', 'pills' and 'book' in the name
