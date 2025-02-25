@@ -95,3 +95,12 @@ $ gem install bundler
 $ bundle
 ```
 
+## Available Tasks
+
+```bash
+# run all tests of the project
+$ bundle exec rspec
+
+# run linter
+$ bundle exec rubocop
+```
