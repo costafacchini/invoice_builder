@@ -62,8 +62,8 @@ Total: 98.38
 
 ## Requirements
 
-- [ ] Use either Ruby or Javascript;
-- [ ] Do not use any external libraries or frameworks, such as Rails, to solve this problem;
+- [X] Use either Ruby or Javascript;
+- [X] Do not use any external libraries or frameworks, such as Rails, to solve this problem;
 - [ ] Include detailed instructions on how to run the application and an explanation of assumptions you make;
 - [ ] Please limit the amount of time you spend on the problem to 4 hours;
 - [ ] Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt;
@@ -104,3 +104,7 @@ $ bundle exec rspec
 # run linter
 $ bundle exec rubocop
 ```
+
+## Decisions
+
+Create a base class to load and process data regardless of the file type. Then I implemented a specialization of it that knows how to process text files. If the need arises to process a file in a different format, all you need to do is implement the adapter that knows how to read that type of file.
