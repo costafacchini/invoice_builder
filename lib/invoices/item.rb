@@ -1,6 +1,6 @@
 module Invoices
   class Item
-    attr_accessor :name, :quantity, :price
+    attr_accessor :name, :quantity
 
     def initialize(name, quantity, unit_price)
       @name = name
@@ -19,7 +19,7 @@ module Invoices
 
     def taxes
       @taxes_calculator.reduce(0) do |sum, tax_calculator|
-        sum + tax_calculator.taxes(total_without_taxes)
+        sum + (tax_calculator.taxes(@unit_price) * quantity)
       end
     end
 

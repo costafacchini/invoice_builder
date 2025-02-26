@@ -8,7 +8,7 @@ RSpec.describe Invoices::Item do
       item.add_tax_calculator(instance_double('tax_calculator', taxes: 1.0))
       item.add_tax_calculator(instance_double('tax_calculator', taxes: 1.0))
 
-      expect(item.taxes).to be 2.0
+      expect(item.taxes).to be 4.0
     end
   end
 
@@ -18,7 +18,7 @@ RSpec.describe Invoices::Item do
       item.add_tax_calculator(instance_double('tax_calculator', taxes: 1.0))
       item.add_tax_calculator(instance_double('tax_calculator', taxes: 0.5))
 
-      expect(item.total).to be 21.9
+      expect(item.total).to be 23.4
     end
   end
 end

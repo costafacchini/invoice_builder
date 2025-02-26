@@ -9,8 +9,8 @@ module TaxCalculator
 
     protected
 
-    def calculate_tax(item_total)
-      item_total * @tax_rate
+    def calculate_tax(unit_price)
+      unit_price * @tax_rate
     end
   end
 end

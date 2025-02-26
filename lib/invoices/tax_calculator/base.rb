@@ -1,7 +1,7 @@
 module TaxCalculator
   class Base
-    def taxes(item_total)
-      tax = calculate_tax(item_total)
+    def taxes(unit_price)
+      tax = calculate_tax(unit_price)
       round_tax(tax)
     end
 
@@ -13,6 +13,6 @@ module TaxCalculator
 
     protected
 
-    def calculate_tax(item_total); end
+    def calculate_tax(unit_price); end
   end
 end

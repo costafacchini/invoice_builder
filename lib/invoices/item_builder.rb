@@ -1,6 +1,6 @@
-require 'invoices/tax_calculator/imported'
-require 'invoices/tax_calculator/not_taxed'
-require 'invoices/tax_calculator/taxed'
+require_relative 'tax_calculator/imported'
+require_relative 'tax_calculator/not_taxed'
+require_relative 'tax_calculator/taxed'
 require_relative 'item'
 
 module Invoices
