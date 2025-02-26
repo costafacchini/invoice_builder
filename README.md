@@ -66,9 +66,9 @@ Total: 98.38
 - [X] Do not use any external libraries or frameworks, such as Rails, to solve this problem;
 - [ ] Include detailed instructions on how to run the application and an explanation of assumptions you make;
 - [ ] Please limit the amount of time you spend on the problem to 4 hours;
-- [ ] Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt;
-- [ ] Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions;
-- [ ] When I purchase items I receive a receipt which lists the name of all the items and their price (including tax), finishing with the total cost of the items, and the total amounts of sales taxes paid. The rounding rules for sales tax are that for a tax rate of n%, a shelf price of p contains (np/100 rounded up to the nearest 0.05) amount of sales tax;
+- [X] Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt;
+- [X] Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions;
+- [X] When I purchase items I receive a receipt which lists the name of all the items and their price (including tax), finishing with the total cost of the items, and the total amounts of sales taxes paid. The rounding rules for sales tax are that for a tax rate of n%, a shelf price of p contains (np/100 rounded up to the nearest 0.05) amount of sales tax;
 
 ## Setup Ruby (only if you have not installed)
 
@@ -112,3 +112,9 @@ Create a base class to load and process data regardless of the file type. Then I
 Based on the samples given, to know if an item is imported just check if it has the word 'imported' in the name
 
 Based on the samples given, to find out if an item is not taxed, just check if it does not have the words 'chocolate', 'pills' and 'book' in the name
+
+For the print receipt part, I implemented an interface that defines the contract that the printer must follow. That way, if we need to extend the code by printing in HTML for example, we just need to implement a new class specialized for that.
+
+I decided to separate the normal items from the invoice items. It seems to me that they are different things. The invoice items need to add up the total taxes.
+
+I created separate calculators for different types of calculations. If you have a new rule, just add the rule in the invoice item builder and the rest will continue to work without needing to be modified.
