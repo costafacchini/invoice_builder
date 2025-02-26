@@ -13,6 +13,10 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'simplecov'
+
+SimpleCov.start unless ENV['NO_COVERAGE']
+
 require_relative 'support/file_fixtures'
 
 RSpec.configure do |config|
