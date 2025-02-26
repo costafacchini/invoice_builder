@@ -19,7 +19,7 @@ module Invoices
 
     def taxes
       @taxes_calculator.reduce(0) do |sum, tax_calculator|
-        sum + tax_calculator.calculate(total_without_taxes)
+        sum + tax_calculator.taxes(total_without_taxes)
       end
     end
 
