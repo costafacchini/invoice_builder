@@ -64,8 +64,8 @@ Total: 98.38
 
 - [X] Use either Ruby or Javascript;
 - [X] Do not use any external libraries or frameworks, such as Rails, to solve this problem;
-- [ ] Include detailed instructions on how to run the application and an explanation of assumptions you make;
-- [ ] Please limit the amount of time you spend on the problem to 4 hours;
+- [X] Include detailed instructions on how to run the application and an explanation of assumptions you make;
+- [X] Please limit the amount of time you spend on the problem to 4 hours;
 - [X] Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt;
 - [X] Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions;
 - [X] When I purchase items I receive a receipt which lists the name of all the items and their price (including tax), finishing with the total cost of the items, and the total amounts of sales taxes paid. The rounding rules for sales tax are that for a tax rate of n%, a shelf price of p contains (np/100 rounded up to the nearest 0.05) amount of sales tax;
@@ -103,6 +103,12 @@ $ bundle exec rspec
 
 # run linter
 $ bundle exec rubocop
+```
+
+# How to use
+
+```bash
+$ ruby ruby lib/main.rb spec/fixtures/input.txt
 ```
 
 ## Decisions

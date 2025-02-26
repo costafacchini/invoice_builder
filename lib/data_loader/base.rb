@@ -8,6 +8,6 @@ module DataLoader
       @items = []
     end
 
-    def load_data; end
+    def load_items; end
   end
 end
