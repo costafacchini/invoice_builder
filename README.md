@@ -107,6 +107,8 @@ $ bundle exec rubocop
 
 # How to use
 
+Example of how to run the project with sample file (you can use any text file you want, just change the file path):
+
 ```bash
 $ ruby ruby lib/main.rb spec/fixtures/input.txt
 ```
